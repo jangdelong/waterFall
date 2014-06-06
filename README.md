@@ -21,11 +21,13 @@ waterFall v0.1
     
 ==============
     插件使用说明：
-     	waterFall.init({ 
-     		container: document.getElementById('container'),	
-     		itemClsName: 'item',			
-     		imgUrl: 'images/', 			
-     		data: json.data,			
-     		colNum: 1,						
-     		colWidth: 240 					
-     	}); 
+        window.onload = function() {
+         	waterFall.init({ 
+         		container: document.getElementById('container'),	
+         		itemClsName: 'item',			
+         		imgUrl: 'images/', 			
+         		data: json.data,			
+         		colNum: 1,						
+         		colWidth: 240 					
+         	}); 
+     	};
