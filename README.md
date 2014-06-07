@@ -22,7 +22,7 @@ waterFall v0.1
 ==============
     插件使用说明：
     window.onload = function() {
-     	waterFall.init({ 
+     	var waterFall = new WaterFall({ 
      		container: document.getElementById('container'),	
      		itemClsName: 'item',			
      		imgUrl: 'images/', 			
