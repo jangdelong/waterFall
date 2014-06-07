@@ -20,7 +20,7 @@ waterFall v0.1
     参数	{number}	options.colWidth		每列数据块宽度
     
 ==============
-    插件使用说明：
+    插件使用实例：
     window.onload = function() {
      	var waterFall = new WaterFall({ 
      		container: document.getElementById('container'),	
