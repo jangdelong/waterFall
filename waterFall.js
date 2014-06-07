@@ -14,7 +14,7 @@
  * @param	{number}	options.colWidth		每列数据块宽度
  *
  * @example
- *		waterFall.init({ 
+ *		var waterFall = new WaterFall({ 
  *			container: document.getElementById('container'),	
  *			itemClsName: 'item',			
  *			imgUrl: 'images/', 			
@@ -23,15 +23,12 @@
  *			colWidth: 240 					
  *		}); 
  */
-
-
-
 ;(function(win, doc) {
 	var $$ = function(id) {
 		return doc.getElementById(id);
 	};
 
-	var WaterFall = function() {
+	var WaterFall = function(options) {
 		this.container = $$('container');	//瀑布流容器
 		this.itemClsName = 'item';			//数据块类名
 		this.imgUrl = 'images/'; 			//图片目录
@@ -39,6 +36,8 @@
 
 		this.colNum = 1;					//瀑布列数
 		this.colWidth = 240; 				//每列宽度
+
+		this.init(options);
 	};
 
 	/* 扩展参数 */
@@ -107,7 +106,6 @@
 	/* 滚动加载 */
 	WaterFall.prototype.scroll = function() {
 		var _this = this;
-		_this.indexImg += _this.colNum;
 
 		//判断加载条件
 		if (_this.isScroll() && _this.data.length) {
@@ -186,5 +184,7 @@
 		return lastItemH < scrollTop + height;
 	};
 
-	 win.waterFall = new WaterFall();
+	 win.WaterFall = WaterFall;
+
+
 })(window, document);
